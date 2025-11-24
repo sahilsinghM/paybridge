@@ -4,6 +4,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.paybridge.com"),
   title: "PayBridge | Digital Payments Infrastructure",
   description: "Infra-first payments platform for large-scale bill collections, mandates, and reconciliation.",
   icons: {
