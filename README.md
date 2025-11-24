@@ -39,3 +39,4 @@ A Next.js 14 + Tailwind CSS + shadcn/ui marketing site for the PayBridge fintech
 ## Notes
 - All copy and visuals are original placeholders; replace with production content as needed.
 - Components are mobile-first and use `max-w-7xl` container widths for consistent layouts.
+- If your network blocks npm registry access, configure the appropriate proxy or mirror before running `npm install`.
