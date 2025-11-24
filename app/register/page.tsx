@@ -2,13 +2,12 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
-export default function LoginPage() {
-  const handleLogin = async () => {
+export default function RegisterPage() {
+  const handleRegister = async () => {
     const email = (document.getElementById('email') as HTMLInputElement).value;
     const password = (document.getElementById('password') as HTMLInputElement).value;
-    const response = await fetch('http://localhost:5000/api/login', {
+    const response = await fetch('http://localhost:5000/api/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -17,7 +16,7 @@ export default function LoginPage() {
     });
     const data = await response.json();
     if (data.success) {
-      alert('Login successful');
+      alert('Registration successful');
     } else {
       alert(data.message);
     }
@@ -28,8 +27,8 @@ export default function LoginPage() {
       <div className="container-base flex items-center justify-center">
         <Card className="w-full max-w-md">
           <CardHeader className="space-y-2 text-center">
-            <CardTitle>Merchant Login</CardTitle>
-            <CardDescription>Access your PayBridge dashboard.</CardDescription>
+            <CardTitle>Create an Account</CardTitle>
+            <CardDescription>Start your journey with PayBridge.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
@@ -40,16 +39,9 @@ export default function LoginPage() {
               <Label htmlFor="password">Password</Label>
               <Input id="password" type="password" placeholder="••••••••" />
             </div>
-            <div className="flex items-center justify-between text-sm text-primary">
-              <Link href="#">Forgot password?</Link>
-              <Link href="#">Need access?</Link>
-            </div>
-            <Button className="w-full" size="lg" onClick={handleLogin}>
-              Login
+            <Button className="w-full" size="lg" onClick={handleRegister}>
+              Register
             </Button>
-            <p className="text-center text-xs text-gray-500">
-              By logging in you agree to the PayBridge terms and privacy policy.
-            </p>
           </CardContent>
         </Card>
       </div>
