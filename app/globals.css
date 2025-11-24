@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.75rem;
+  color-scheme: light;
+}
+
+body {
+  @apply bg-white text-secondary antialiased;
+}
+
+a {
+  @apply text-primary hover:text-accent transition-colors;
+}
+
+.section {
+  @apply py-20;
+}
+
+.container-base {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.card-grid {
+  @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.section-heading {
+  @apply text-3xl sm:text-4xl font-semibold text-secondary;
+}
+
+.subtext {
+  @apply text-lg text-gray-600;
+}
