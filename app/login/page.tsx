@@ -9,7 +9,7 @@ export default function LoginPage() {
   const handleLogin = async () => {
     const email = (document.getElementById('email') as HTMLInputElement).value;
     const password = (document.getElementById('password') as HTMLInputElement).value;
-    const response = await fetch('http://localhost:5000/api/login', {
+    const response = await fetch('/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
